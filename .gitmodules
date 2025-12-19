@@ -1,3 +1,0 @@
-[submodule "vsdfpga_labs"]
-	path = vsdfpga_labs
-	url = https://github.com/Free-95/vsd-riscv2.git
