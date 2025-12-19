@@ -10,7 +10,7 @@ ___
 ## Verifying RISC-V Reference Flow
 
 >Build and run the provided fundamental RISC-V programs, and observe successful execution on console 
-#### Program 1 : `sum1ton.c`
+### Program 1 : `sum1ton.c`
 **Commands :**
 ```bash
 # Navigate to 'samples' directory
@@ -22,9 +22,10 @@ spike pk sum1ton.o
 ```
 
 **Output :**
+
 ![](images/10.png)
 
-#### Program 2 : `1ton_custom.c`
+### Program 2 : `1ton_custom.c`
 **Commands :**
 ```bash
 # Compile the program and link with assembly code
@@ -36,7 +37,7 @@ spike pk 1ton_custom.o
 **Output :**
 ![](images/11.png)
 
-#### Custom Program : `factorial.c`
+### Custom Program : `factorial.c`
 **Commands :**
 ```bash
 riscv64-unknown-elf-gcc -o factorial.o factorial.c
@@ -46,7 +47,7 @@ spike pk factorial.o
 **Output :**
 ![](images/12.png)
 
-#### Verilog Program : `adder.v` (with testbench `tb.v`)
+### Verilog Program : `adder.v` (with testbench `tb.v`)
 **Commands :**
 ```bash
 # Compile the Verilog program
