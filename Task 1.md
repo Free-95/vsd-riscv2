@@ -25,6 +25,7 @@ spike pk sum1ton.o
 
 ![](images/10.png)
 
+
 ### Program 2 : `1ton_custom.c`
 **Commands :**
 ```bash
@@ -35,7 +36,9 @@ spike pk 1ton_custom.o
 ```
 
 **Output :**
+
 ![](images/11.png)
+
 
 ### Custom Program : `factorial.c`
 **Commands :**
@@ -45,7 +48,9 @@ spike pk factorial.o
 ```
 
 **Output :**
+
 ![](images/12.png)
+
 
 ### Verilog Program : `adder.v` (with testbench `tb.v`)
 **Commands :**
@@ -57,6 +62,7 @@ vvp adder
 ```
 
 **Output :**
+
 ![](images/13.png)
 ___
 ## Verifying the Working of GUI Desktop (noVNC)
@@ -106,6 +112,7 @@ ___
 - Specific files include **`sum1ton.c`** (C code), **`load.S`** (Assembly code), and **`1ton_custom.c`** (C code). 
 - To access them in the environment, we navigate using the command: `cd samples`.
 
+
 >**2. How is the program compiled and loaded into memory?**
 
 - The GNU Toolchain is used for compilation and the Spike simulator is used for loading and execution:
@@ -117,12 +124,14 @@ ___
     - Command: `spike pk <output_name>.o`.
     - The Proxy Kernel (`pk`) serves as a lightweight bootloader/OS that loads the ELF file into the simulated memory and handles system calls.
 
+
 >**3. How does the RISC-V core access memory and memory-mapped IO?**
 
 - The RISC-V architecture uses a *Load/Store architecture* for all memory accesses:
 	- **Memory Access:** The core moves data between memory and registers using dedicated instructions like `lw` (load word) and `sw` (store word). It cannot perform arithmetic operations directly on memory addresses; data must first be loaded into a register.
     
 	- **Memory-Mapped I/O (MMIO):** RISC-V does not have special "IN" or "OUT" instructions for Input/Output. Instead, I/O devices (like an IP block) are assigned specific addresses in the main memory map. The core communicates with these devices by reading from and writing to these specific memory addresses using the same standard load/store instructions.
+
 
 >**4. Where would a new FPGA IP block logically integrate in this system?**
 
